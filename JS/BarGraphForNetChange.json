@@ -1,0 +1,28 @@
+{
+  "title": "Net Population Change",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/peleMons/FIT3179DataViz2/main/PopulationDatasetRevised.csv"
+  },
+  "height": 500,
+  "width": 885,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Countries",
+      "sort": {"field": "NetChange", "order": "descending"},
+      "axis": {"labels": false}
+    },
+    "y": {
+      "field": "NetChange",
+      "type": "quantitative",
+      "title": "Net Population Change"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "NetChange", "type": "quantitative"}
+    ]
+  }
+}

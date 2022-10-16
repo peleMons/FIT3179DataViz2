@@ -1,0 +1,28 @@
+{
+  "title": "Population Density",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/peleMons/FIT3179DataViz2/main/PopulationDatasetRevised.csv"
+  },
+  "height": 500,
+  "width": 900,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Countries",
+      "sort": {"field": "Density", "order": "descending"},
+      "axis": {"labels": false}
+    },
+    "y": {
+      "field": "Density",
+      "type": "quantitative",
+      "title": "Density (P/km2)"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Density", "type": "quantitative"}
+    ]
+  }
+}

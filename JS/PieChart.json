@@ -1,0 +1,32 @@
+{
+  "title": "Land Area (Km2)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/peleMons/FIT3179DataViz2/main/PopulationDatasetRevised.csv"
+  },
+  "params": [
+    {
+      "name": "LandAreaAbove",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 10000000,
+        "step": 10000,
+        "name": "Land Area Greater Than: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.LandArea > LandAreaAbove"}],
+  "height": 500,
+  "width": 900,
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "LandArea", "type": "quantitative"},
+    "color": {"field": "Country", "type": "nominal"},
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "LandArea", "type": "quantitative"}
+    ]
+  }
+}
