@@ -1,0 +1,15 @@
+.center{
+    padding-left: 17.5%;
+    padding-bottom: 40px;
+}
+
+.title{
+    padding-left: 35%;
+    color: lightskyblue;
+    font-weight: bold;
+    -webkit-text-stroke: 0.8px black;
+}
+
+body {
+    background-image: url("CrowdImage.jpg");
+}
